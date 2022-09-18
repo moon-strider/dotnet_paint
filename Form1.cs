@@ -31,6 +31,7 @@ namespace VGE
             {
                 initButton(item.Key, ++i, clickEventFiller);
             }
+            creators.Add("Select", new Creators.PrototypeCreator());
             initButton("Select", ++i, selectEvent);
         }
 
@@ -49,6 +50,11 @@ namespace VGE
             creator = "Select";
             // Переход в режим выбора фигуры
             // Или выбор последней созданной фигуры
+            Creators.PrototypeCreator protoCreator = (Creators.PrototypeCreator)creators[creator];
+            //                      TEST
+            Figures.Figure p = new Figures.Rect(0, 0, 30, 30);
+            protoCreator.Proto = p;
+            //                      TEST
             accentButton(button);
         }
 
