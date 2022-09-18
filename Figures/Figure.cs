@@ -38,5 +38,6 @@ namespace VGE.Figures
             h = new_h;
         }
         public abstract void Draw(Graphics g);
+        public Figure Clone() => MemberwiseClone() as Figure;
     }
 }
